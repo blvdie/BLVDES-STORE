@@ -1,0 +1,92 @@
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA.csproj.AssemblyReference.cache
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Buy.g.cs
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Login.g.cs
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Logo.g.cs
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\MainWindow.g.cs
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Register.g.cs
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Start.g.cs
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\App.g.cs
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA_MarkupCompile.cache
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA_MarkupCompile.lref
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA_Content.g.cs
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\bin\Debug\KURSOVAYA_RABOTA.exe.config
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\bin\Debug\KURSOVAYA_RABOTA.exe
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\bin\Debug\KURSOVAYA_RABOTA.pdb
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\bin\Debug\EntityFramework.dll
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\bin\Debug\EntityFramework.xml
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\bin\Debug\ru\EntityFramework.resources.dll
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\App.baml
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Buy.baml
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Login.baml
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Logo.baml
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\MainWindow.baml
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Register.baml
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Start.baml
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA.g.resources
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA.Properties.Resources.resources
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA.csproj.GenerateResource.cache
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA.csproj.CoreCompileInputs.cache
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAY.AE25680C.Up2Date
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA.exe
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA.pdb
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Add.g.cs
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Edit.g.cs
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Cart.g.cs
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Add.baml
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Cart.baml
+D:\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Edit.baml
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\bin\Debug\KURSOVAYA_RABOTA.exe.config
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\bin\Debug\KURSOVAYA_RABOTA.exe
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\bin\Debug\KURSOVAYA_RABOTA.pdb
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\bin\Debug\BouncyCastle.Crypto.dll
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\bin\Debug\EntityFramework.dll
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\bin\Debug\itextsharp.dll
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\bin\Debug\QRCoder.dll
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\bin\Debug\System.Drawing.Common.dll
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\bin\Debug\EntityFramework.xml
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\bin\Debug\itextsharp.xml
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\bin\Debug\ru\EntityFramework.resources.dll
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA.csproj.AssemblyReference.cache
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Cart.baml
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Checkout.baml
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Add.g.cs
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\AddCS.g.cs
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\AddDota.g.cs
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Buy.g.cs
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Cart.g.cs
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Checkout.g.cs
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Edit.g.cs
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\EditCS.g.cs
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\EditDota.g.cs
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Login.g.cs
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Logo.g.cs
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\MainWindow.g.cs
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Register.g.cs
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Start.g.cs
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\ThankYouPage.g.cs
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\App.g.cs
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA_Content.g.cs
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\GeneratedInternalTypeHelper.g.cs
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA_MarkupCompile.cache
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA_MarkupCompile.lref
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\App.baml
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Add.baml
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\AddCS.baml
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\AddDota.baml
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Buy.baml
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Edit.baml
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\EditCS.baml
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\EditDota.baml
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Login.baml
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Logo.baml
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\MainWindow.baml
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Register.baml
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\Start.baml
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\ThankYouPage.baml
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA.g.resources
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA.Properties.Resources.resources
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA.csproj.GenerateResource.cache
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA.csproj.CoreCompileInputs.cache
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAY.AE25680C.Up2Date
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA.exe
+S:\USERS\52-03\Федорова Алёна Игоревна\KURSOVAYA RABOTA\KURSOVAYA_RABOTA\obj\Debug\KURSOVAYA_RABOTA.pdb

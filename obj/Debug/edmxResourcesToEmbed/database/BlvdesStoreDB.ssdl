@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище BlvdesStoreDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Carts">
+    <Key>
+      <PropertyRef Name="CartId" />
+    </Key>
+    <Property Name="CartId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="SkinId" Type="int" />
+    <Property Name="GameId" Type="int" />
+    <Property Name="AddedAt" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CSSkins">
+    <Key>
+      <PropertyRef Name="SkinId" />
+    </Key>
+    <Property Name="SkinId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IconUrl" Type="nvarchar" MaxLength="255" />
+    <Property Name="TypeId" Type="int" />
+    <Property Name="SubcategoryId" Type="int" />
+    <Property Name="HoldPeriodId" Type="int" />
+    <Property Name="GameId" Type="int" />
+  </EntityType>
+  <EntityType Name="DotaHeroes">
+    <Key>
+      <PropertyRef Name="HeroId" />
+    </Key>
+    <Property Name="HeroId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HeroName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DotaRarities">
+    <Key>
+      <PropertyRef Name="RarityId" />
+    </Key>
+    <Property Name="RarityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RarityName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DotaSkins">
+    <Key>
+      <PropertyRef Name="SkinId" />
+    </Key>
+    <Property Name="SkinId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="IconUrl" Type="nvarchar" MaxLength="255" />
+    <Property Name="HeroId" Type="int" />
+    <Property Name="SlotId" Type="int" />
+    <Property Name="RarityId" Type="int" />
+    <Property Name="HoldPeriodId" Type="int" />
+    <Property Name="GameId" Type="int" />
+  </EntityType>
+  <EntityType Name="DotaSlots">
+    <Key>
+      <PropertyRef Name="SlotId" />
+    </Key>
+    <Property Name="SlotId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SlotName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FilterCS">
+    <Key>
+      <PropertyRef Name="TypeId" />
+    </Key>
+    <Property Name="TypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Games">
+    <Key>
+      <PropertyRef Name="GameId" />
+    </Key>
+    <Property Name="GameId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GameName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HoldPeriods">
+    <Key>
+      <PropertyRef Name="HoldPeriodId" />
+    </Key>
+    <Property Name="HoldPeriodId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HoldDays" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Inventory">
+    <Key>
+      <PropertyRef Name="InventoryId" />
+    </Key>
+    <Property Name="InventoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="SkinId" Type="int" />
+    <Property Name="GameId" Type="int" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BuyerId" Type="int" />
+    <Property Name="SkinId" Type="int" />
+    <Property Name="GameId" Type="int" />
+    <Property Name="OrderDate" Type="datetime" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SubcategoryCS">
+    <Key>
+      <PropertyRef Name="SubcategoryId" />
+    </Key>
+    <Property Name="SubcategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubcategoryName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TypeId" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Transactions">
+    <Key>
+      <PropertyRef Name="TransactionId" />
+    </Key>
+    <Property Name="TransactionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+    <Property Name="Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="RoleId" Type="int" />
+    <Property Name="RegistrationDate" Type="datetime" />
+    <Property Name="LastLogin" Type="datetime" />
+    <Property Name="NickName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Balance" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AvatarImage" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK__Carts__GameId__47DBAE45">
+    <End Role="Games" Type="Self.Games" Multiplicity="0..1" />
+    <End Role="Carts" Type="Self.Carts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Games">
+        <PropertyRef Name="GameId" />
+      </Principal>
+      <Dependent Role="Carts">
+        <PropertyRef Name="GameId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Carts__UserId__46E78A0C">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Carts" Type="Self.Carts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Carts">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CSSkins__Subcate__5DCAEF64">
+    <End Role="SubcategoryCS" Type="Self.SubcategoryCS" Multiplicity="0..1" />
+    <End Role="CSSkins" Type="Self.CSSkins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubcategoryCS">
+        <PropertyRef Name="SubcategoryId" />
+      </Principal>
+      <Dependent Role="CSSkins">
+        <PropertyRef Name="SubcategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CSSkins__TypeId__5CD6CB2B">
+    <End Role="FilterCS" Type="Self.FilterCS" Multiplicity="0..1" />
+    <End Role="CSSkins" Type="Self.CSSkins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FilterCS">
+        <PropertyRef Name="TypeId" />
+      </Principal>
+      <Dependent Role="CSSkins">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DotaSkins__HeroI__5629CD9C">
+    <End Role="DotaHeroes" Type="Self.DotaHeroes" Multiplicity="0..1" />
+    <End Role="DotaSkins" Type="Self.DotaSkins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DotaHeroes">
+        <PropertyRef Name="HeroId" />
+      </Principal>
+      <Dependent Role="DotaSkins">
+        <PropertyRef Name="HeroId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DotaSkins__Rarit__5812160E">
+    <End Role="DotaRarities" Type="Self.DotaRarities" Multiplicity="0..1" />
+    <End Role="DotaSkins" Type="Self.DotaSkins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DotaRarities">
+        <PropertyRef Name="RarityId" />
+      </Principal>
+      <Dependent Role="DotaSkins">
+        <PropertyRef Name="RarityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DotaSkins__SlotI__571DF1D5">
+    <End Role="DotaSlots" Type="Self.DotaSlots" Multiplicity="0..1" />
+    <End Role="DotaSkins" Type="Self.DotaSkins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DotaSlots">
+        <PropertyRef Name="SlotId" />
+      </Principal>
+      <Dependent Role="DotaSkins">
+        <PropertyRef Name="SlotId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inventory__GameI__4222D4EF">
+    <End Role="Games" Type="Self.Games" Multiplicity="0..1" />
+    <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Games">
+        <PropertyRef Name="GameId" />
+      </Principal>
+      <Dependent Role="Inventory">
+        <PropertyRef Name="GameId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Inventory__UserI__412EB0B6">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Inventory" Type="Self.Inventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Inventory">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__BuyerId__5070F446">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="BuyerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__GameId__5165187F">
+    <End Role="Games" Type="Self.Games" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Games">
+        <PropertyRef Name="GameId" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="GameId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Subcatego__TypeI__3E52440B">
+    <End Role="FilterCS" Type="Self.FilterCS" Multiplicity="0..1" />
+    <End Role="SubcategoryCS" Type="Self.SubcategoryCS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FilterCS">
+        <PropertyRef Name="TypeId" />
+      </Principal>
+      <Dependent Role="SubcategoryCS">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Transacti__UserI__4BAC3F29">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Transactions" Type="Self.Transactions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Transactions">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Users__RoleId__29572725">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CSSkins_Games">
+    <End Role="Games" Type="Self.Games" Multiplicity="0..1" />
+    <End Role="CSSkins" Type="Self.CSSkins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Games">
+        <PropertyRef Name="GameId" />
+      </Principal>
+      <Dependent Role="CSSkins">
+        <PropertyRef Name="GameId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CSSkins_HoldPeriods">
+    <End Role="HoldPeriods" Type="Self.HoldPeriods" Multiplicity="0..1" />
+    <End Role="CSSkins" Type="Self.CSSkins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoldPeriods">
+        <PropertyRef Name="HoldPeriodId" />
+      </Principal>
+      <Dependent Role="CSSkins">
+        <PropertyRef Name="HoldPeriodId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DotaSkins_Games">
+    <End Role="Games" Type="Self.Games" Multiplicity="0..1" />
+    <End Role="DotaSkins" Type="Self.DotaSkins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Games">
+        <PropertyRef Name="GameId" />
+      </Principal>
+      <Dependent Role="DotaSkins">
+        <PropertyRef Name="GameId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DotaSkins_HoldPeriods">
+    <End Role="HoldPeriods" Type="Self.HoldPeriods" Multiplicity="0..1" />
+    <End Role="DotaSkins" Type="Self.DotaSkins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HoldPeriods">
+        <PropertyRef Name="HoldPeriodId" />
+      </Principal>
+      <Dependent Role="DotaSkins">
+        <PropertyRef Name="HoldPeriodId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище BlvdesStoreDBModelContainer">
+    <EntitySet Name="Carts" EntityType="Self.Carts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CSSkins" EntityType="Self.CSSkins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DotaHeroes" EntityType="Self.DotaHeroes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DotaRarities" EntityType="Self.DotaRarities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DotaSkins" EntityType="Self.DotaSkins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DotaSlots" EntityType="Self.DotaSlots" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FilterCS" EntityType="Self.FilterCS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Games" EntityType="Self.Games" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HoldPeriods" EntityType="Self.HoldPeriods" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inventory" EntityType="Self.Inventory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SubcategoryCS" EntityType="Self.SubcategoryCS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transactions" EntityType="Self.Transactions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Carts__GameId__47DBAE45" Association="Self.FK__Carts__GameId__47DBAE45">
+      <End Role="Games" EntitySet="Games" />
+      <End Role="Carts" EntitySet="Carts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Carts__UserId__46E78A0C" Association="Self.FK__Carts__UserId__46E78A0C">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Carts" EntitySet="Carts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CSSkins__Subcate__5DCAEF64" Association="Self.FK__CSSkins__Subcate__5DCAEF64">
+      <End Role="SubcategoryCS" EntitySet="SubcategoryCS" />
+      <End Role="CSSkins" EntitySet="CSSkins" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CSSkins__TypeId__5CD6CB2B" Association="Self.FK__CSSkins__TypeId__5CD6CB2B">
+      <End Role="FilterCS" EntitySet="FilterCS" />
+      <End Role="CSSkins" EntitySet="CSSkins" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DotaSkins__HeroI__5629CD9C" Association="Self.FK__DotaSkins__HeroI__5629CD9C">
+      <End Role="DotaHeroes" EntitySet="DotaHeroes" />
+      <End Role="DotaSkins" EntitySet="DotaSkins" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DotaSkins__Rarit__5812160E" Association="Self.FK__DotaSkins__Rarit__5812160E">
+      <End Role="DotaRarities" EntitySet="DotaRarities" />
+      <End Role="DotaSkins" EntitySet="DotaSkins" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DotaSkins__SlotI__571DF1D5" Association="Self.FK__DotaSkins__SlotI__571DF1D5">
+      <End Role="DotaSlots" EntitySet="DotaSlots" />
+      <End Role="DotaSkins" EntitySet="DotaSkins" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inventory__GameI__4222D4EF" Association="Self.FK__Inventory__GameI__4222D4EF">
+      <End Role="Games" EntitySet="Games" />
+      <End Role="Inventory" EntitySet="Inventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Inventory__UserI__412EB0B6" Association="Self.FK__Inventory__UserI__412EB0B6">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Inventory" EntitySet="Inventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__BuyerId__5070F446" Association="Self.FK__Orders__BuyerId__5070F446">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__GameId__5165187F" Association="Self.FK__Orders__GameId__5165187F">
+      <End Role="Games" EntitySet="Games" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Subcatego__TypeI__3E52440B" Association="Self.FK__Subcatego__TypeI__3E52440B">
+      <End Role="FilterCS" EntitySet="FilterCS" />
+      <End Role="SubcategoryCS" EntitySet="SubcategoryCS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Transacti__UserI__4BAC3F29" Association="Self.FK__Transacti__UserI__4BAC3F29">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Transactions" EntitySet="Transactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Users__RoleId__29572725" Association="Self.FK__Users__RoleId__29572725">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CSSkins_Games" Association="Self.FK_CSSkins_Games">
+      <End Role="Games" EntitySet="Games" />
+      <End Role="CSSkins" EntitySet="CSSkins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CSSkins_HoldPeriods" Association="Self.FK_CSSkins_HoldPeriods">
+      <End Role="HoldPeriods" EntitySet="HoldPeriods" />
+      <End Role="CSSkins" EntitySet="CSSkins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DotaSkins_Games" Association="Self.FK_DotaSkins_Games">
+      <End Role="Games" EntitySet="Games" />
+      <End Role="DotaSkins" EntitySet="DotaSkins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DotaSkins_HoldPeriods" Association="Self.FK_DotaSkins_HoldPeriods">
+      <End Role="HoldPeriods" EntitySet="HoldPeriods" />
+      <End Role="DotaSkins" EntitySet="DotaSkins" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
