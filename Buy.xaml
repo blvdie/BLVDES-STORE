@@ -1,0 +1,305 @@
+﻿<Page x:Class="KURSOVAYA_RABOTA.Buy"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:local="clr-namespace:KURSOVAYA_RABOTA"
+      mc:Ignorable="d"
+      d:DesignHeight="770" d:DesignWidth="1200"
+      Title="BuyDota">
+    <Page.Resources>
+        <!-- Цветовая палитра -->
+        <Color x:Key="Primary">#be8dee</Color>
+        <SolidColorBrush x:Key="PrimaryBrush" Color="{StaticResource Primary}"/>
+        <SolidColorBrush x:Key="DarkBackground" Color="#222222"/>
+        <SolidColorBrush x:Key="LightGray" Color="#AAAAAA"/>
+        <SolidColorBrush x:Key="OrangeBrush" Color="#FFD700"/>
+
+        <local:InvertedBooleanToVisibilityConverter x:Key="InvertedBooleanToVisibilityConverter"/>
+        
+        <!-- Стиль разделителя -->
+        <Style x:Key="SeparatorStyle" TargetType="Separator">
+            <Setter Property="Background" Value="#555555"/>
+            <Setter Property="Width" Value="1"/>
+        </Style>
+        <!-- Стиль кнопок -->
+        <Style x:Key="FlatButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{StaticResource PrimaryBrush}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource PrimaryBrush}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#444444"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <!-- Шаблон карточки товара -->
+        <DataTemplate x:Key="ProductCardTemplate">
+            <Border BorderBrush="#555555" BorderThickness="1" Margin="0" Width="204" Height="185">
+                <StackPanel Background="#1e1e1e">
+                    <Image Source="{Binding ImageSource}" Width="120" Height="80" Margin="0,10,5,0" Stretch="UniformToFill"/>
+                    <TextBlock Text="{Binding Name}" Foreground="White" FontSize="14" HorizontalAlignment="Center" Padding="4"/>
+                    <TextBlock Text="{Binding Price, StringFormat=₽{0:F2}}" 
+                       Foreground="{StaticResource OrangeBrush}" 
+                       FontSize="14" 
+                       HorizontalAlignment="Center"/>
+
+                    <!-- Админские кнопки -->
+                    <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Visibility="{Binding DataContext.IsAdmin, RelativeSource={RelativeSource AncestorType=Page}, Converter={StaticResource BooleanToVisibilityConverter}}">
+                        <Button Content="✏️"
+                        Style="{StaticResource AdminButtonStyle}"
+                        Click="EditProduct_Click"
+                        Tag="{Binding SkinId}"
+                        ToolTip="Редактировать"
+                        Margin="2"/>
+                        <Button Content="🗑️"
+                        Style="{StaticResource DeleteButtonStyle}"
+                        Click="DeleteProduct_Click"
+                        Tag="{Binding SkinId}"
+                        ToolTip="Удалить"
+                        Margin="2"/>
+                    </StackPanel>
+
+                    <!-- Обычная корзина для пользователей -->
+                    <Button Content="🛒 В КОРЗИНУ"
+                    Style="{StaticResource FlatButtonStyle}"
+                    Tag="{Binding SkinId}"
+                    Click="AddToCart_Click"
+                    HorizontalAlignment="Stretch"
+                    Margin="5,0,9,10"
+                    Visibility="{Binding DataContext.IsAdmin, RelativeSource={RelativeSource AncestorType=Page}, Converter={StaticResource InvertedBooleanToVisibilityConverter}}"/>
+                </StackPanel>
+            </Border>
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid Margin="0,0,10,0">
+        <!-- Шапка -->
+        <DockPanel Background="{StaticResource DarkBackground}" DockPanel.Dock="Top" Height="50" Margin="-15,20,-15,700">
+            <StackPanel Orientation="Horizontal" Margin="-16,0,0,0">
+                <!-- Dota / CS переключатель -->
+                <TextBlock Text="🎮 КУПИТЬ СКИНЫ CS" 
+                           Foreground="#be8dee" 
+                           FontSize="16" 
+                           Cursor="Hand"
+                           VerticalAlignment="Center" 
+                           Margin="40,0,5,0" 
+                           FontWeight="Bold"/>
+                <Separator Style="{StaticResource SeparatorStyle}" Margin="20,0,7,0"/>
+                <TextBlock Text="🎮 КУПИТЬ СКИНЫ DOTA" 
+                           Foreground="{StaticResource PrimaryBrush}" 
+                           FontSize="16" 
+                           Cursor="Hand"
+                           VerticalAlignment="Center" 
+                           Margin="10,0,5,0"
+                           FontWeight="Bold"/>
+                <Separator Style="{StaticResource SeparatorStyle}" Margin="20,0,7,0"/>
+                <!-- Корзина -->
+                <Button Content="🛒 КОРЗИНА" 
+                        Background="{StaticResource PrimaryBrush}" 
+                        Foreground="Black" 
+                        BorderBrush="{StaticResource PrimaryBrush}" 
+                        BorderThickness="2" 
+                        Padding="10" 
+                        FontSize="14"
+                        VerticalAlignment="Center"
+                        Click="GoToCart_Click"
+                        Margin="320,0,5,0" Height="50" FontWeight="Bold"/>
+                <Separator Style="{StaticResource SeparatorStyle}" Margin="20,0,20,0"/>
+                <!-- Никнейм как ссылка -->
+                <!-- В DockPanel с пользователем -->
+                <StackPanel x:Name="UserPanel" Orientation="Vertical" Margin="10,0,0,0" VerticalAlignment="Center" Width="100">
+                    <TextBlock x:Name="UserNameText" 
+               Text="Пользователь" 
+               Foreground="White" 
+               FontSize="14" 
+               Cursor="Hand"
+                               VerticalAlignment="Center" Width="100"/>
+                    <TextBlock x:Name="UserBalanceText" 
+               Text="Баланс: ₽0.00" 
+               Foreground="White"
+               FontSize="12"
+               Cursor="Hand"
+                               VerticalAlignment="Center" Width="100"/>
+                </StackPanel>
+                <Separator Style="{StaticResource SeparatorStyle}" Margin="15,0,15,0"/>
+                <!-- Выйти -->
+                <Button Content="Выйти" 
+                        Style="{StaticResource FlatButtonStyle}"
+                        Click="Logout_Click"
+                        Foreground="Red"
+                        Margin="0,0,5,0" Width="82" FontWeight="Bold"/>
+            </StackPanel>
+        </DockPanel>
+
+        <!-- Основной контент -->
+        <Grid Margin="0,75,0,0">
+            <!-- Заголовок -->
+            <TextBlock Text="КУПИТЬ СКИНЫ DOTA 2" 
+                       FontSize="24" FontWeight="Bold" 
+                       HorizontalAlignment="Center" 
+                       Foreground="White" 
+                       Margin="0,25,0,635" 
+                       Width="290"/>
+
+            <!-- Фильтры и каталог -->
+            <Grid Margin="0,115,10,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <!-- Фильтры -->
+                    <ColumnDefinition Width="*"/>
+                    <!-- Каталог -->
+                </Grid.ColumnDefinitions>
+
+                <!-- Фильтры -->
+                <StackPanel Background="#333333" 
+            Grid.Column="0" 
+            Margin="0,-50,10,-15">
+
+                    <!-- Заголовок и поле поиска -->
+                    <TextBlock Text="Цена" FontSize="16" FontWeight="Bold" Margin="10,10,0,0"/>
+                    <TextBox x:Name="MinPriceBox"
+             Text="Цена от"
+             Foreground="#888"
+             GotFocus="OnFilterBoxGotFocus"
+             LostFocus="OnFilterBoxLostFocus"
+             Width="90"
+             PreviewTextInput="MinPriceBox_PreviewTextInput"
+             InputScope="Number"
+             Margin="10,10,0,10"/>
+
+                    <TextBox x:Name="MaxPriceBox"
+             Text="Цена до"
+             Foreground="#888"
+             GotFocus="OnFilterBoxGotFocus"
+             LostFocus="OnFilterBoxLostFocus"
+             Width="90"
+             PreviewTextInput="MaxPriceBox_PreviewTextInput"
+             InputScope="Number"
+             Margin="10,0,0,10"/>
+
+                    <!-- Прокручиваемая область с фильтрами -->
+                    <ScrollViewer VerticalScrollBarVisibility="Auto"
+                  HorizontalScrollBarVisibility="Disabled"
+                  Width="180"
+                  Margin="0,0,0,40" Height="407">
+                        <!-- Оставляем место для кнопки -->
+
+                        <!-- Содержимое фильтров -->
+                        <StackPanel>
+                            <Expander Header="Герой" FontSize="14" Margin="10,10,0,0">
+                                <ItemsControl x:Name="HeroesList"/>
+                            </Expander>
+
+                            <Expander Header="Слот" FontSize="14" Margin="10,10,0,0">
+                                <ItemsControl x:Name="SlotsList"/>
+                            </Expander>
+
+                            <Expander Header="Раритетность" FontSize="14" Margin="10,10,0,0">
+                                <ItemsControl x:Name="RaritiesList"/>
+                            </Expander>
+
+                            <Expander Header="Холд" FontSize="14" Margin="10,10,0,0">
+                                <ItemsControl x:Name="HoldList"/>
+                            </Expander>
+                        </StackPanel>
+                    </ScrollViewer>
+
+                    <!-- Кнопка всегда внизу -->
+                    <Button Content="СБРОСИТЬ ФИЛЬТР"
+            BorderThickness="0"
+            Padding="3"
+            FontSize="12"
+            FontWeight="Bold"
+            Width="165"
+            Height="40"
+            Margin="0,-10,0,10"
+            Click="ResetFilters_Click"
+            Background="{StaticResource PrimaryBrush}"
+            Foreground="White"
+            Style="{StaticResource FlatButtonStyle}"/>
+                </StackPanel>
+
+
+                <!-- Каталог -->
+                <Grid Margin="196,0,-20,0" Grid.ColumnSpan="2">
+                    <!-- Мини-шапка -->
+                    <DockPanel Background="#333333" Margin="-11,-50,-6,590">
+                        <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" Margin="7,0,-70,0" Width="219">
+                           
+                                <TextBox x:Name="SearchBox"
+             Text="Поиск..."
+             Foreground="#888"
+             GotFocus="SearchBox_GotFocus"
+             LostFocus="SearchBox_LostFocus"
+             PreviewTextInput="SearchBox_PreviewTextInput"
+             Margin="0,0,0,0"
+             Width="150"
+             Height="42"/>
+                                <!-- Оставляем место для кнопки -->
+
+                                <!-- Кнопка "Добавить +" -->
+                           
+                        </StackPanel>
+                        <StackPanel x:Name="SearchAndAddPanel" Orientation="Horizontal" Margin="0,0,480,0">
+                        </StackPanel>
+                        <ToggleButton x:Name="SortToggleAsc" Margin="0,0,10,0"
+                                      Content="Цена ↑" 
+                                      Background="Transparent" 
+                                      Foreground="White" 
+                                      FontSize="14" 
+                                      Padding="10" 
+                                      Click="SortToggleAsc_Click"
+                                      DockPanel.Dock="Right" Width="100" Height="40"/>
+                        <ToggleButton x:Name="SortToggleDesc" Margin="45,0,0,0"
+                                      Content="Цена ↓" 
+                                      Background="Transparent" 
+                                      Foreground="White" 
+                                      FontSize="14" 
+                                      Padding="10" 
+                                      Click="SortToggleDesc_Click"
+                                      DockPanel.Dock="Right" Width="100" Height="40"/>
+                    </DockPanel>
+
+                    <!-- Каталог товаров -->
+                    <ItemsControl x:Name="ProductsList" 
+                                  ItemTemplate="{StaticResource ProductCardTemplate}"
+                                  Margin="0,5,0,30">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid Columns="5" Rows="3" HorizontalAlignment="Left"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemContainerStyle>
+                            <Style TargetType="ContentPresenter">
+                                <Setter Property="Margin" Value="-5,0,0,-1"/>
+                            </Style>
+                        </ItemsControl.ItemContainerStyle>
+                    </ItemsControl>
+
+                    <!-- Пагинация -->
+                    <StackPanel x:Name="PaginationPanel" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,565,0,-2"/>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
+

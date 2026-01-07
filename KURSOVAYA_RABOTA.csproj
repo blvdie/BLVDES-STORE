@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE9375CC-9101-4505-BDE4-46D62732D0D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>KURSOVAYA_RABOTA</RootNamespace>
+    <AssemblyName>KURSOVAYA_RABOTA</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder, Version=1.6.0.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>packages\QRCoder.1.6.0\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Drawing.Common.4.7.2\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Add.xaml.cs">
+      <DependentUpon>Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddCS.xaml.cs">
+      <DependentUpon>AddCS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddDota.xaml.cs">
+      <DependentUpon>AddDota.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BooleanToVisibilityConverter.cs" />
+    <Compile Include="Buy.xaml.cs">
+      <DependentUpon>Buy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.xaml.cs">
+      <DependentUpon>Cart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="database\BlvdesStoreDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BlvdesStoreDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="database\BlvdesStoreDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BlvdesStoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="database\BlvdesStoreDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BlvdesStoreDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="database\Carts.cs">
+      <DependentUpon>BlvdesStoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="database\CSSkins.cs">
+      <DependentUpon>BlvdesStoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="database\DotaHeroes.cs">
+      <DependentUpon>BlvdesStoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="database\DotaRarities.cs">
+      <DependentUpon>BlvdesStoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="database\DotaSkins.cs">
+      <DependentUpon>BlvdesStoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="database\DotaSlots.cs">
+      <DependentUpon>BlvdesStoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="database\FilterCS.cs">
+      <DependentUpon>BlvdesStoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="database\Games.cs">
+      <DependentUpon>BlvdesStoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="database\HoldPeriods.cs">
+      <DependentUpon>BlvdesStoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="database\Inventory.cs">
+      <DependentUpon>BlvdesStoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="database\Orders.cs">
+      <DependentUpon>BlvdesStoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="database\Roles.cs">
+      <DependentUpon>BlvdesStoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="database\SubcategoryCS.cs">
+      <DependentUpon>BlvdesStoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="database\sysdiagrams.cs">
+      <DependentUpon>BlvdesStoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="database\Transactions.cs">
+      <DependentUpon>BlvdesStoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="database\Users.cs">
+      <DependentUpon>BlvdesStoreDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Edit.xaml.cs">
+      <DependentUpon>Edit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditCS.xaml.cs">
+      <DependentUpon>EditCS.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditDota.xaml.cs">
+      <DependentUpon>EditDota.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InvertedBooleanToVisibilityConverter.cs" />
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="models\AppConnect.cs" />
+    <Compile Include="models\CartItem.cs" />
+    <Compile Include="models\DotaSkin.cs" />
+    <Compile Include="models\Hero.cs" />
+    <Compile Include="models\HoldPeriod.cs" />
+    <Compile Include="models\Rarity.cs" />
+    <Compile Include="models\Slot.cs" />
+    <Compile Include="models\User.cs" />
+    <Compile Include="Register.xaml.cs">
+      <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Start.xaml.cs">
+      <DependentUpon>Start.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ThankYouPage.xaml.cs">
+      <DependentUpon>ThankYouPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddCS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddDota.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Buy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Cart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Edit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditCS.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditDota.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Logo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Logo.xaml.cs">
+      <DependentUpon>Logo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Start.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ThankYouPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="database\BlvdesStoreDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BlvdesStoreDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="database\BlvdesStoreDB.edmx.diagram">
+      <DependentUpon>BlvdesStoreDB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="database\BlvdesStoreDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BlvdesStoreDB.Context.cs</LastGenOutput>
+      <DependentUpon>BlvdesStoreDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="database\BlvdesStoreDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BlvdesStoreDB.edmx</DependentUpon>
+      <LastGenOutput>BlvdesStoreDB.cs</LastGenOutput>
+    </Content>
+    <Resource Include="images\avatar.jpg" />
+    <Resource Include="images\logo.png" />
+    <Resource Include="images\pattern.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

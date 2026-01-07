@@ -1,0 +1,26 @@
+﻿<Page x:Class="KURSOVAYA_RABOTA.Start"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KURSOVAYA_RABOTA"
+      mc:Ignorable="d" 
+        Title="Blvdes Store" 
+        Width="1200" Height="800">
+
+    <Grid>
+        <!-- Лого -->
+        <Image Source="/images/logo.png" Width="200" Height="149" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,130,0,0"/>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,305,0,0">
+            <TextBlock Text="BLVDES STORE" FontSize="60" Foreground="#be8dee" FontWeight="Bold" TextAlignment="Center"/>
+            <TextBlock Text="Скины из Dota 2 и CS:GO" FontSize="20" Foreground="#E0E0E0" Margin="0,10,0,30" TextAlignment="Center"/>
+            <!-- Кнопки -->
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                <Button Content="Войти" Width="150" Height="40" Background="#be8dee" Foreground="White" FontWeight="Bold" Click="Login_Click"/>
+
+                <Button Content="Регистрация" Width="150" Height="40" Background="#be8dee" Foreground="White" FontWeight="Bold" Click="Register_Click" Margin="0,15,0,0"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
