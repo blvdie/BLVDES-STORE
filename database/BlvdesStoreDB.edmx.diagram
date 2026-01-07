@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a80f5bc058d34567b3839e672db138c2" Name="Diagram1">
+        <EntityTypeShape EntityType="BlvdesStoreDBModel.Carts" Width="1.5" PointX="5.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlvdesStoreDBModel.CSSkins" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlvdesStoreDBModel.DotaHeroes" Width="1.5" PointX="6" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlvdesStoreDBModel.DotaRarities" Width="1.5" PointX="6" PointY="14.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlvdesStoreDBModel.DotaSkins" Width="1.5" PointX="8.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlvdesStoreDBModel.DotaSlots" Width="1.5" PointX="6" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlvdesStoreDBModel.FilterCS" Width="1.5" PointX="0.75" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlvdesStoreDBModel.Games" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlvdesStoreDBModel.HoldPeriods" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlvdesStoreDBModel.Inventory" Width="1.5" PointX="5.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlvdesStoreDBModel.Orders" Width="1.5" PointX="8.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlvdesStoreDBModel.Roles" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlvdesStoreDBModel.SubcategoryCS" Width="1.5" PointX="3" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlvdesStoreDBModel.sysdiagrams" Width="1.5" PointX="8.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlvdesStoreDBModel.Transactions" Width="1.5" PointX="5.25" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BlvdesStoreDBModel.Users" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <AssociationConnector Association="BlvdesStoreDBModel.FK__Carts__GameId__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="BlvdesStoreDBModel.FK__Carts__UserId__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="BlvdesStoreDBModel.FK__CSSkins__Subcate__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="BlvdesStoreDBModel.FK__CSSkins__TypeId__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="BlvdesStoreDBModel.FK_CSSkins_Games" ManuallyRouted="false" />
+        <AssociationConnector Association="BlvdesStoreDBModel.FK_CSSkins_HoldPeriods" ManuallyRouted="false" />
+        <AssociationConnector Association="BlvdesStoreDBModel.FK__DotaSkins__HeroI__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="BlvdesStoreDBModel.FK__DotaSkins__Rarit__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="BlvdesStoreDBModel.FK__DotaSkins__SlotI__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="BlvdesStoreDBModel.FK_DotaSkins_Games" ManuallyRouted="false" />
+        <AssociationConnector Association="BlvdesStoreDBModel.FK_DotaSkins_HoldPeriods" ManuallyRouted="false" />
+        <AssociationConnector Association="BlvdesStoreDBModel.FK__Subcatego__TypeI__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="BlvdesStoreDBModel.FK__Inventory__GameI__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="BlvdesStoreDBModel.FK__Orders__GameId__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="BlvdesStoreDBModel.FK__Inventory__UserI__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="BlvdesStoreDBModel.FK__Orders__BuyerId__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="BlvdesStoreDBModel.FK__Users__RoleId__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="BlvdesStoreDBModel.FK__Transacti__UserI__4BAC3F29" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
